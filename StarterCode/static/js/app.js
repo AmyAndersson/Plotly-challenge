@@ -88,7 +88,8 @@ samples= importedData2.samples;
       marker: {
         size: filt_sample.sample_values,
         color: filt_sample.otu_ids
-      }
+      },
+      text: filt_sample.otu_ids.slice(0,10).map(otuids=> `OTU ${otuids}`)
     };
     
     var data2 = [bubbletrace];
@@ -142,16 +143,16 @@ var filt_meta = metadata.filter(selmet=>selmet.id==selectedid)[0];
     diveage.text(`Age: ${age}`);
 
     var divloc = infobox.append("div");
-    divloc.attr('value', locataion);
-    divloc.text(`Location: ${location}`);
-
-    var divloc = infobox.append("div");
-    divloc.attr('value', locataion);
+    divloc.attr('value', location);
     divloc.text(`Location: ${location}`);
 
     var divb = infobox.append("div");
     divb.attr('value', bbtype);
     divb.text(`Bbtype: ${bbtype}`);
+
+    var divw = infobox.append("div");
+    divw.attr('value', wfreq);
+    divw.text(`Bbtype: ${wfreq}`);
 
   });
 
