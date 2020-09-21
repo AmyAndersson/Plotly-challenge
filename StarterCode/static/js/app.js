@@ -79,6 +79,7 @@ samples= importedData2.samples;
    
     Plotly.newPlot('bar', data)
 
+// bubble graph 
 
     var bubbletrace = {
       x: filt_sample.otu_ids,
@@ -100,75 +101,59 @@ samples= importedData2.samples;
       xaxis: {title:"OTU IDs"}
       }
     
-    Plotly.newPlot("bubble", data2, layout)
+    Plotly.newPlot("bubble", data2, layout);
     
-});
 
+
+// data table 
+
+var metadata = importedData2.metadata; 
+
+var filt_meta = metadata.filter(selmet=>selmet.id==selectedid)[0];
+
+ var id = selectedid; 
+ var ethnicity = filt_meta.ethnicity;
+ var gender = filt_meta.gender;
+ var age = filt_meta.age;
+ var location = filt_meta.location;
+ var bbtype = filt_meta.bbtype;
+ var wfreq = filt_meta.wfreq;
+
+
+    var infobox = d3.select("#sample-metadata");
+
+    infobox.html("");
+
+    var divid = infobox.append("div");
+    divid.attr('value', id);
+    divid.text(`ID: ${id}`);
+
+
+    var diveth = infobox.append("div");
+    diveth.attr('value', ethnicity);
+    diveth.text(`Ethnicity: ${ethnicity}`);
+
+    var divgen = infobox.append("div");
+    divgen.attr('value', gender);
+    divgen.text(`Gender: ${gender}`);
+
+    var diveage = infobox.append("div");
+    diveage.attr('value', age);
+    diveage.text(`Age: ${age}`);
+
+    var divloc = infobox.append("div");
+    divloc.attr('value', locataion);
+    divloc.text(`Location: ${location}`);
+
+    var divloc = infobox.append("div");
+    divloc.attr('value', locataion);
+    divloc.text(`Location: ${location}`);
+
+    var divb = infobox.append("div");
+    divb.attr('value', bbtype);
+    divb.text(`Bbtype: ${bbtype}`);
+
+  });
 
 
 };
-
-
-
-
-
-
-
-
-  // var trace1 = {
-  //       x: sample_values,
-  //       y: otu_ids,
-  //       type: "box",
-  //       name: "OTU Samples",
-  //       text: otu_labels,
-  //       orientation: "h"
-
-  //     };
-    
-    //   // Create the data array for the plot
-    //   var data = [trace1];
-    
-    //   // Define the plot layout
-    //   var layout = {
-    //     title: "OTU samples",
-    //     xaxis: { title: "Otu_ids" },
-    //     yaxis: { title: "Sample values" }
-    //   };
-
-    //   Plotly.newPlot("bar", data, layout);
-    // });
-    
-      // Plot the chart to a div tag with id "plot"
-
-// trace1={
-//   x:[1,2,3,4],
-//   y: [5,6,7,8],
-//   type: "box"
-
-// };
-// var data = [trace1];
-
-// layout = {
-//   title: "hello",
-//   xaxis: {title : "hello1"},
-//   yaxis : {title: 'hello2'}
-// }
-
-
-//       Plotly.newPlot("bar", data, layout);
-//     });
-
-// for each id in names, add to the list of names. 
-
-
-    // importedData.forEach((dropdownlist) => {
-    //   var dropdownMenu = d3.select("#selDataset");
-    //     var dropdownname = dropdownMenu.append("option");
-    //       dropdownname.text();
-    //     });
-
-
-
-  // sample_values = unnpack(importedData.samples, 1);
-  // otu_ids = unnpack(importedData.samples, 0);
-  // otu_labels = unnpack(importedData.samples, 2)
