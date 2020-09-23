@@ -60,7 +60,7 @@ samples= importedData2.samples;
 
 
 
-// Baschart 
+// Barchart 
     var dropdownMenu = d3.select("#selDataset");
     var svalue = dropdownMenu.node().value;
     var filt_sample = samples.filter(sel=>sel.id==selectedid)[0];
@@ -74,10 +74,16 @@ samples= importedData2.samples;
         type : 'bar',
         orientation : 'h'
     };
+
+    var layout = {
+      title: "Top 10 OTU's for Participant",
+      xaxis: {title:"Sample Value"},
+      yaxis: {title:"OTU ids"}
+      }; 
     
-    var data = [trace]
+    var data = [trace];
    
-    Plotly.newPlot('bar', data)
+    Plotly.newPlot('bar', data, layout);
 
 // bubble graph 
 
@@ -94,15 +100,16 @@ samples= importedData2.samples;
     
     var data2 = [bubbletrace];
     
-    var layout = {
-      title: 'Marker Size',
+    var layout2 = {
+      title: "Participant's Total OTU's",
       showlegend: false,
       height: 600,
       width: 1000, 
-      xaxis: {title:"OTU IDs"}
+      xaxis: {title:"OTU IDs"},
+      yaxis: {title:"Sample values"}
       }
     
-    Plotly.newPlot("bubble", data2, layout);
+    Plotly.newPlot("bubble", data2, layout2);
     
 
 
@@ -152,9 +159,26 @@ var filt_meta = metadata.filter(selmet=>selmet.id==selectedid)[0];
 
     var divw = infobox.append("div");
     divw.attr('value', wfreq);
-    divw.text(`Bbtype: ${wfreq}`);
+    divw.text(`Wfreq: ${wfreq}`);
 
-  });
+  
 
+  
+  // gauge chart 
 
-};
+  var tracegauge = {
+      domain: { x: [0, 1], y: [0, 1] },
+  value: wfreq,
+  title: { text: "Wash Frequency" },
+  type: "indicator",
+      mode: "gauge+number",
+      gauge: { axis: { range: [null, 9] } }
+
+  };
+
+  var data3 = [tracegauge];
+
+  Plotly.newPlot('gauge', data3)
+
+});
+}
