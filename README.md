@@ -42,7 +42,7 @@ The following charts were created from the data:
 
 ### Bubble Chart 
 
-![bubble Chart](Images/bubble.png)
+![bubble Chart](Images/bubble.PNG)
 
 ## OPTIONAL: Gauge Chart 
 
