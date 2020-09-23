@@ -34,15 +34,15 @@ The following charts were created from the data:
 
 ### Demographic Table data
 
-![DemoChart](Images/demo_table.png)
+![bar Chart](Images/demo_table.PNG)
 
 ### Bar Chart 
 
-![Bar Chart](Images/bar.png)
+![bar Chart](Images/bar.PNG)
 
 ### Bubble Chart 
 
-![Bubble Chart](Images/bubble.png)
+![bubble Chart](Images/bubble.png)
 
 ## OPTIONAL: Gauge Chart 
 
