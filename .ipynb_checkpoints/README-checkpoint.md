@@ -28,11 +28,23 @@ The Belly Button Biodiversity project involved reading and displaying data from 
 
 The following charts were created from the data: 
 
+### Drop Down Menu 
+
 ![Drop down](Images/Drop_Down.png)
+
+### Demographic Table data
+
+![Demographic_Table](Images/demoraphic_table.png)
+
+### Bar Chart 
 
 ![Bar Chart](Images/bar_chart.png)
 
+### Bubble Chart 
+
 ![Bubble Chart](Images/bubble.png)
+
+## OPTIONAL: Gauge Chart 
 
 ![Gauge Chart](Images/gauge.png)
 
