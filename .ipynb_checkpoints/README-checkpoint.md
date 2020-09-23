@@ -34,11 +34,11 @@ The following charts were created from the data:
 
 ### Demographic Table data
 
-![Demographic_Table](Images/demoraphic_table.png)
+![DemoChart](Images/demographic_table.png)
 
 ### Bar Chart 
 
-![Bar Chart](Images/bar_chart.png)
+![Bar Chart](Images/bar.png)
 
 ### Bubble Chart 
 
