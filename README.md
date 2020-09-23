@@ -34,7 +34,7 @@ The following charts were created from the data:
 
 ### Demographic Table data
 
-![DemoChart](Images/demographic_table.png)
+![DemoChart](Images/demo_table.png)
 
 ### Bar Chart 
 
@@ -49,4 +49,4 @@ The following charts were created from the data:
 ![Gauge Chart](Images/gauge.png)
 
 
-To see it live: [Amy Andersson: Belly Button Diversity ](http://robdunnlab.com/projects/belly-button-biodiversity/)
+To see it live: [Amy Andersson: Belly Button Diversity ](https://amyandersson.github.io/Plotly-challenge/)
